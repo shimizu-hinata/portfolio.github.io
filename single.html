@@ -40,10 +40,7 @@
 				</header>
 				<span class="image featured">
 					<h3>紹介動画</h3>
-					<video controls preload="metadata" style="width: 100%; height: auto; display: block;">
-						<source src="movies/AlgomateColony.mp4" type="video/mp4" />
-						お使いのブラウザは動画再生に対応していません。
-					</video>
+					<div class="js-video-player" data-video-url="https://drive.google.com/file/d/16tkBSSP6DT93uMh1SscQ86Nltv69H7tA/view?usp=drivesdk"></div>
 				</span>
 				<section>
 					<h3>プロジェクト情報</h3>
@@ -100,10 +97,7 @@
 				</header>
 				<span class="image featured">
 					<h3>紹介動画</h3>
-					<video controls preload="metadata" style="width: 100%; height: auto; display: block;">
-						<source src="movies/KaomojiClash.mp4" type="video/mp4" />
-						お使いのブラウザは動画再生に対応していません。
-					</video>
+					<div class="js-video-player" data-video-url="https://drive.google.com/file/d/1Dlg9igxHfe_1e76KiELNo263URd63KDn/view?usp=drive_link"></div>
 				</span>
 				<section>
 					<h3>プロジェクト情報</h3>
@@ -194,6 +188,58 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
+		(function () {
+			function toDrivePreviewUrl(rawUrl) {
+				if (!rawUrl) return "";
+				if (rawUrl.indexOf("drive.google.com") === -1) return "";
+
+				if (rawUrl.indexOf("/preview") !== -1) {
+					return rawUrl;
+				}
+
+				var idMatch = rawUrl.match(/\/d\/([a-zA-Z0-9_-]+)/);
+				if (idMatch && idMatch[1]) {
+					return "https://drive.google.com/file/d/" + idMatch[1] + "/preview";
+				}
+
+				return "";
+			}
+
+			var players = document.querySelectorAll(".js-video-player[data-video-url]");
+			for (var i = 0; i < players.length; i++) {
+				var container = players[i];
+				var rawUrl = (container.getAttribute("data-video-url") || "").trim();
+				if (!rawUrl) continue;
+
+				var drivePreviewUrl = toDrivePreviewUrl(rawUrl);
+				if (drivePreviewUrl) {
+					var frame = document.createElement("iframe");
+					frame.src = drivePreviewUrl;
+					frame.width = "100%";
+					frame.height = "520";
+					frame.style.display = "block";
+					frame.style.border = "0";
+					frame.allow = "autoplay; fullscreen";
+					frame.allowFullscreen = true;
+					container.appendChild(frame);
+					continue;
+				}
+
+				if (/\.(mp4|webm|ogg)(\?|#|$)/i.test(rawUrl)) {
+					var video = document.createElement("video");
+					video.controls = true;
+					video.preload = "metadata";
+					video.style.width = "100%";
+					video.style.height = "auto";
+					video.style.display = "block";
+					var source = document.createElement("source");
+					source.src = rawUrl;
+					video.appendChild(source);
+					container.appendChild(video);
+				}
+			}
+		})();
+
 		(function () {
 			var params = new URLSearchParams(window.location.search);
 			var selectedPost = params.get("post");
