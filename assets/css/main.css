@@ -1810,6 +1810,8 @@ input, select, textarea {
 		.author img {
 			border-radius: 100%;
 			display: block;
+			height: 4em;
+			object-fit: cover;
 			width: 4em;
 		}
 
@@ -2944,6 +2946,8 @@ input, select, textarea {
 							}
 
 							.post > header .meta .author img {
+								height: 3.5em;
+								object-fit: cover;
 								width: 3.5em;
 							}
 
@@ -3035,6 +3039,21 @@ input, select, textarea {
 		letter-spacing: 0.25em;
 		line-height: 2.5;
 		margin-top: -1em;
+		text-transform: uppercase;
+	}
+
+	.post > header .title .project-genre {
+		background: rgba(46, 186, 174, 0.08);
+		border: solid 1px rgba(46, 186, 174, 0.35);
+		border-radius: 999px;
+		display: inline-block;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.62em;
+		font-weight: 800;
+		letter-spacing: 0.2em;
+		line-height: 1.8;
+		margin: 0 0 1.25em 0;
+		padding: 0.3em 1.1em;
 		text-transform: uppercase;
 	}
 
@@ -3414,30 +3433,24 @@ input, select, textarea {
 	#intro .logo {
 		border-bottom: 0;
 		display: inline-block;
-		margin: 0 0 1em 0;
+		margin: 0;
 		overflow: hidden;
 		position: relative;
-		width: 4em;
+		height: 6em;
+		border-radius: 50%;
+		width: 6em;
 	}
 
 		#intro .logo:before {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' preserveAspectRatio='none' zoomAndPan='disable'%3E%3Cpolygon points='0,0 100,0 100,25 50,0 0,25' style='fill:%23f4f4f4' /%3E%3Cpolygon points='0,100 100,100 100,75 50,100 0,75' style='fill:%23f4f4f4' /%3E%3C/svg%3E");
-			background-position: top left;
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
+			display: none;
 		}
 
 		#intro .logo img {
 			display: block;
-			margin-left: -0.25em;
-			width: 4.5em;
+			height: 100%;
+			margin-left: 0;
+			object-fit: cover;
+			width: 6em;
 		}
 
 	#intro header h2 {
