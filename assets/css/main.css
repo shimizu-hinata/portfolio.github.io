@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/* main.css now composes modular stylesheets by responsibility. */
 @import url("modules/00-preflight.css");
 @import url("modules/10-base.css");
@@ -7,13 +6,3 @@
 @import url("modules/40-content.css");
 @import url("modules/50-layout.css");
 
-=======
-﻿/* main.css now composes modular stylesheets by responsibility. */
-@import url("modules/00-preflight.css");
-@import url("modules/10-base.css");
-@import url("modules/20-grid.css");
-@import url("modules/30-elements.css");
-@import url("modules/40-content.css");
-@import url("modules/50-layout.css");
-
->>>>>>> 8c3233d (git init)
