@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -28,4 +29,36 @@
 		@include breakpoint('<=xsmall') {
 			@include html-grid(1em, 'xsmall');
 		}
+=======
+///
+/// Future Imperfect by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Row */
+
+	.row {
+		@include html-grid(1em);
+
+		@include breakpoint('<=xlarge') {
+			@include html-grid(1em, 'xlarge');
+		}
+
+		@include breakpoint('<=large') {
+			@include html-grid(1em, 'large');
+		}
+
+		@include breakpoint('<=medium') {
+			@include html-grid(1em, 'medium');
+		}
+
+		@include breakpoint('<=small') {
+			@include html-grid(1em, 'small');
+		}
+
+		@include breakpoint('<=xsmall') {
+			@include html-grid(1em, 'xsmall');
+		}
+>>>>>>> 8c3233d (git init)
 	}
