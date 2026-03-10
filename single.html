@@ -219,9 +219,10 @@
 				if (drivePreviewUrl) {
 					var frame = document.createElement("iframe");
 					frame.src = drivePreviewUrl;
-					frame.width = "100%";
-					frame.height = "520";
 					frame.style.display = "block";
+					frame.style.width = "100%";
+					frame.style.aspectRatio = "16 / 9";
+					frame.style.height = "auto";
 					frame.style.border = "0";
 					frame.allow = "autoplay; fullscreen";
 					frame.allowFullscreen = true;
