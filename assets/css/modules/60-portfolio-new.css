@@ -478,12 +478,32 @@
     line-height: 1.4;
 }
 
+.carousel-item .period-row,
+.minimal-card .period-row {
+    display: flex;
+    align-items: center;
+    gap: 0.45em;
+    margin-bottom: 0.8em;
+    flex-wrap: wrap;
+}
+
+.carousel-item .published,
+.carousel-item .period,
 .minimal-card .period {
     display: block;
     font-size: 0.6em;
     font-family: "Raleway", Helvetica, sans-serif;
     color: #aaaaaa;
-    margin-bottom: 0.8em;
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+}
+
+.carousel-item .team-label,
+.minimal-card .team-label {
+    margin: 0;
+    font-size: 0.62em;
+    font-family: "Raleway", Helvetica, sans-serif;
+    color: #2ebaae;
     letter-spacing: 0.1em;
 }
 
