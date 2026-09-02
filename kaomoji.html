@@ -35,11 +35,14 @@
 						<h2><a href="#">Kaomoji Clash</a></h2>
 						<p>このゲームでは自分で顔文字を組み立て、アリーナで敵と激突させるトップダウン型アクションゲームです。
 							<br>自分だけの顔文字、戦略、そして衝突の爽快感を楽しむゲームとなります。
-							<br>顔文字だけでなくアリーナに設置するアイテムを追加することにより単なる衝突だけでは済まさず、戦略性を上げるようにしています。</p>
+							<br>顔文字だけでなくアリーナに設置するアイテムを追加することにより単なる衝突だけでは済まさず、戦略性を上げるようにしています。
+						</p>
 					</div>
 					<div class="meta">
 						<h3>開発メンバー</h3>
-						<a href="#" class="author"><span class="name">清水日向多</span><span class="role-tags"><span class="role-tag">プログラマー</span><span class="role-tag">プランナー</span></span><img src="images/Hiyoko_icon.png"alt="" /></a>
+						<a href="#" class="author"><span class="name">清水日向多</span><span class="role-tags"><span
+									class="role-tag">プログラマー</span><span class="role-tag">プランナー</span></span><img
+								src="images/Hiyoko_icon.png" alt="" /></a>
 					</div>
 				</header>
 				<div class="image featured">
@@ -63,7 +66,8 @@
 					<p>KaomojiClash は、プレイヤーが独自の顔文字を組み立て、アリーナで敵と激突させるトップダウン型アクションゲームです。
 						<br>強さはキャラクターレベルではなく、記号パーツの構成（ビルド） によって決まります。
 						<br>プレイヤーは顔文字を引っ張って発射し、敵に衝突させることでダメージを与えます。
-						<br>収集した記号パーツを組み替えることで戦略的な深みが生まれ、「記号収集 → ビルド再構成 → 再挑戦」のループがゲームの核心を形成します。</p>
+						<br>収集した記号パーツを組み替えることで戦略的な深みが生まれ、「記号収集 → ビルド再構成 → 再挑戦」のループがゲームの核心を形成します。
+					</p>
 				</section>
 				<section>
 					<h3>技術的な工夫・実装内容</h3>
@@ -73,11 +77,13 @@
 						ScriptableObjectでデータ作成などを行いました。
 						<br>例えばカメラ振動などに含ませたいUIはWorldSpaceのCanvasに...
 						それ以外の静的なUIはUIToolkitを使って作成しました。
-						<br>これによりUIのテンプレート性をかなり保持できました。</p>
+						<br>これによりUIのテンプレート性をかなり保持できました。
+					</p>
 				</section>
 				<section>
 					<ul class="actions">
-						<li><button type="button" class="button small js-story-toggle" aria-expanded="false">ストーリーを表示</button></li>
+						<li><button type="button" class="button small js-story-toggle"
+								aria-expanded="false">ストーリーを表示</button></li>
 					</ul>
 					<div class="js-story-content" hidden>
 						<h3>Story</h3>
@@ -86,7 +92,8 @@
 							<br><br>もともと顔文字は、人間が感情を表現するために生み出した記号でした。
 							しかし長い時間の中で、無数の感情が込められたことで、
 							その記号たちは次第に「意味」だけでなく「意識」を持つ存在へと変化していきました。
-							<br><br>こうして、顔文字たちは独自の文明を築き始めます。</p>
+							<br><br>こうして、顔文字たちは独自の文明を築き始めます。
+						</p>
 						<hr />
 						<h4>Kaomoji Civilization</h4>
 						<p>顔文字は「目」「口」「装飾」などの記号によって構成されています。
@@ -94,7 +101,8 @@
 							そのまま顔文字の能力や個性として現れます。
 							<br><br>構成が複雑で完成度の高い顔文字ほど、
 							強く、美しく、完成された存在とされます。
-							<br><br>やがて顔文字たちは、異なる文化圏を形成していきました。</p>
+							<br><br>やがて顔文字たちは、異なる文化圏を形成していきました。
+						</p>
 						<p>文化圏ごとに</p>
 						<ul>
 							<li>顔文字の構造</li>
@@ -111,7 +119,8 @@
 							自分の構造を再構成できる能力です。
 							<br><br>この力によってプレイヤーは、
 							戦うたびに自分の顔文字を変化させ、
-							より強い存在へと進化していきます。</p>
+							より強い存在へと進化していきます。
+						</p>
 						<hr />
 						<h4>Purpose</h4>
 						<p>顔文字文明では、
@@ -130,7 +139,18 @@
 							<br><br>「人間が作った記号が、自ら進化していく世界」
 							<br><br>をテーマにしたゲームです。
 							<br><br>プレイヤーは戦いを通して構造を変化させ、
-							唯一無二の顔文字を完成させていきます。</p>
+							唯一無二の顔文字を完成させていきます。
+						</p>
+					</div>
+				</section>
+				<section>
+					<div class="image featured">
+						<h3>ブラッシュアップ（制作途中）</h3>
+						<iframe src="https://www.youtube.com/embed/D5MxKl4xR1o" width="100%" height="100%" frameborder="0"></iframe>
+						<h4>KaomojiClashをさらにリプレイ性を持たせるようにしました。</h4>
+						<p>記号のステータスをよりビジュアライズ化し見やすくしました。
+							また、ArenaObjectはゲーム中Playerがレベルアップした際に選択できるようにし、毎戦闘後位置を変更できるようにしました。
+						</p>
 					</div>
 				</section>
 				<section>
@@ -138,8 +158,10 @@
 					<ul class="actions">
 						<li><a href="https://github.com/HinataPiyo/KaomojiClash" class="button small" target="_blank"
 								rel="noopener noreferrer">GitHub</a></li>
-						<li><a href="https://drive.google.com/file/d/1BHumg28tov_kHwYOUsf6FRPFnXxUhrHB/view?usp=drive_link" class="button small" target="_blank" rel="noopener noreferrer">実行ファイル（.exe）</a></li>
-						<li><a href="https://drive.google.com/file/d/1-VPgL-ipMn2hWEqfSBidXNOh1_pamVB_/view?usp=drive_link" class="button small" target="_blank" rel="noopener noreferrer">実行ファイル（.apk）</a></li>
+						<li><a href="https://drive.google.com/file/d/1BHumg28tov_kHwYOUsf6FRPFnXxUhrHB/view?usp=drive_link"
+								class="button small" target="_blank" rel="noopener noreferrer">実行ファイル（.exe）</a></li>
+						<li><a href="https://drive.google.com/file/d/1-VPgL-ipMn2hWEqfSBidXNOh1_pamVB_/view?usp=drive_link"
+								class="button small" target="_blank" rel="noopener noreferrer">実行ファイル（.apk）</a></li>
 					</ul>
 				</section>
 				<footer>
@@ -184,8 +206,7 @@
 							<time class="published" datetime="2026-02-1">開発期間:26/01~26/02</time>
 							<a href="#" class="author"><img src="images/KaomojiClash_Logo.png" alt="" /></a>
 						</header>
-						<a href="kaomoji.html" class="image"><img src="images/KaomojiClash_Thumbnail.png"
-								alt="" /></a>
+						<a href="kaomoji.html" class="image"><img src="images/KaomojiClash_Thumbnail.png" alt="" /></a>
 					</article>
 
 					<article class="mini-post">
@@ -194,8 +215,7 @@
 							<time class="published" datetime="2026-02-1">開発期間:25/02~25/06</time>
 							<a href="#" class="author"><img src="images/BombCrash_Logo.png" alt="" /></a>
 						</header>
-						<a href="bombcrash.html" class="image"><img src="images/BombCrash_Thumbnail.png"
-								alt="" /></a>
+						<a href="bombcrash.html" class="image"><img src="images/BombCrash_Thumbnail.png" alt="" /></a>
 					</article>
 				</div>
 			</section>
